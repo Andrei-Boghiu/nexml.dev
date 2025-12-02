@@ -11,7 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
-import logo from "@/app/favicon.ico";
+import Logo from "@/components/logo";
 
 interface NavbarLink {
   text: string;
@@ -31,10 +31,7 @@ export default function Navbar() {
       <div className="max-w-container relative mx-auto">
         <NavbarComponent>
           <NavbarLeft>
-            <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-              <Image src={logo} alt="logo" width={20} height={20} />
-              NEXML
-            </Link>
+            <Logo />
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
                 {links.map(({ text, href }) => (
@@ -65,10 +62,7 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent side="right">
                 <nav className="grid gap-6 text-lg font-medium">
-                  <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-                    <Image src={logo} alt="logo" width={20} height={20} />
-                    <span>NEXML</span>
-                  </Link>
+                  <Logo />
                   {links.map((link) => (
                     <Link key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground">
                       {link.text}
