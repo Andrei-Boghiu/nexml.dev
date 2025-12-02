@@ -53,8 +53,8 @@ export default function Footer() {
                 <h3 className="text-xl font-bold">NEXML</h3>
               </div>
             </FooterColumn>
-            {columns.map((column, index) => (
-              <FooterColumn key={index}>
+            {columns.map((column) => (
+              <FooterColumn key={column.title}>
                 <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
                 {column.links.map((link) => (
                   <Link
