@@ -10,7 +10,6 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 import Logo from "@/components/logo";
 
 interface NavbarLink {

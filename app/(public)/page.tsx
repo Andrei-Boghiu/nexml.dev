@@ -1,15 +1,9 @@
+import Hero from "@/components/hero";
+
 export default function HomePage() {
   return (
     <main className="min-h-screen flex flex-col">
-      <section className="flex-1 flex items-center justify-center px-6 py-20 text-center">
-        <div className="max-w-3xl flex flex-col gap-6">
-          <h1 className="text-4xl font-bold tracking-tight">NEXML::Work in Progress</h1>
-          <p className="text-base text-foreground/70 leading-relaxed">
-            NEXML is an AI-powered platform that helps companies score and rank CVs against job descriptions. Our goal
-            is to make recruitment faster, fairer, and more data-driven.
-          </p>
-        </div>
-      </section>
+      <Hero />
 
       <section className="border-t border-foreground/10 py-20 px-6 bg-foreground/5">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
