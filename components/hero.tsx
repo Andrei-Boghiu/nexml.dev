@@ -56,7 +56,7 @@ export default function Hero() {
                 />
               </Mockup>
             </MockupFrame>
-            <Glow variant="top" className="animate-appear-zoom opacity-0 delay-1000" />
+            <Glow variant="top" className="animate-appear-zoom opacity-0 delay-1000 "/>
           </div>
         </div>
       </div>
