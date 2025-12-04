@@ -21,23 +21,23 @@ const columns: FooterColumns[] = [
     links: [
       { text: "Features", href: "/features" },
       { text: "Pricing", href: "/pricing" },
-      { text: "Demo", href: "/demo" },
+      { text: "FAQ", href: "/faq" },
     ],
   },
   {
     title: "Help Center",
     links: [
-      { text: "Report Bug", href: "/report-bug" },
       { text: "Feature Requests", href: "/feature-requests" },
+      { text: "Report Bug", href: "/report-bug" },
       { text: "Feedback", href: "/feedback" },
     ],
   },
   {
     title: "Company",
     links: [
+      { text: "LinkedIn", href: "https://www.linkedin.com/company/nexml" },
       { text: "Contact", href: "/contact" },
       { text: "About", href: "/about" },
-      { text: "LinkedIn", href: "https://www.linkedin.com/company/nexml" },
     ],
   },
 ];

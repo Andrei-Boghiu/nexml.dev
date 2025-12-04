@@ -13,13 +13,13 @@ const config = {
     "Upload, score, and rank resumes in seconds using NEXML's advanced AI/ML engine, tailored to your target job description and policies.",
   badgeText: "See NEXML in Action!",
   badgeBtn: "Request Demo",
-  badgeLink: "/request-demo",
+  badgeLink: "/demo",
 };
 
 export default function Hero() {
   return (
     <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           <Badge variant="outline" className="animate-appear">
             <span className="text-muted-foreground">{config.badgeText}</span>
@@ -36,7 +36,7 @@ export default function Hero() {
           </p>
           <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
             <Button variant="glow" size="lg" asChild>
-              <Link href="/">Read PRFAQ</Link>
+              <Link href="/articles/product-narrative">Read More</Link>
             </Button>
             <Button variant="default" size="lg" asChild>
               <Link href="/">Get Started</Link>
