@@ -3,7 +3,6 @@ import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Navbar as NavbarComponent, NavbarLeft, NavbarRight } from "./ui/navbar";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import Logo from "@/components/logo";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,6 +10,18 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import Logo from "@/components/logo";
+
+interface NavbarLink {
+  text: string;
+  href: string;
+}
+
+const links: NavbarLink[] = [
+  { text: "About", href: "/about" },
+  { text: "Features", href: "/features" },
+  { text: "Pricing", href: "/pricing" },
+];
 
 export default function Navbar() {
   return (
@@ -22,21 +33,15 @@ export default function Navbar() {
             <Logo />
             <NavigationMenu className="hidden md:flex">
               <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-                    <Link href="/about">About</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-                    <Link href="/features">Features</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
-                    <Link href="/pricing">Pricing</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
+                {links.map(({ text, href }) => (
+                  <NavigationMenuItem key={href}>
+                    <NavigationMenuLink asChild>
+                      <Link href={href} className={navigationMenuTriggerStyle()}>
+                        <span>{text}</span>
+                      </Link>
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
           </NavbarLeft>
@@ -59,15 +64,11 @@ export default function Navbar() {
               <SheetContent side="right">
                 <nav className="grid gap-6 text-lg font-medium">
                   <Logo />
-                  <Link href="/about" className="text-muted-foreground hover:text-foreground">
-                    About
-                  </Link>
-                  <Link href="/features" className="text-muted-foreground hover:text-foreground">
-                    Features
-                  </Link>
-                  <Link href="/pricing" className="text-muted-foreground hover:text-foreground">
-                    Pricing
-                  </Link>
+                  {links.map((link) => (
+                    <Link key={link.href} href={link.href} className="text-muted-foreground hover:text-foreground">
+                      {link.text}
+                    </Link>
+                  ))}
                 </nav>
               </SheetContent>
             </Sheet>
