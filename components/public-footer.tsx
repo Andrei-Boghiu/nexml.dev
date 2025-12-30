@@ -40,6 +40,13 @@ const columns: FooterColumns[] = [
       { text: "About", href: "/about" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { text: "Terms of Use", href: "/terms" },
+      { text: "DPA", href: "/dpa" },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -47,7 +54,6 @@ export default function Footer() {
     <footer className="bg-background w-full px-4">
       <div className="max-w-container mx-auto">
         <FooterMain>
-          {/* here add tailwind class to make the firs footer column be space between with that div. And also add a space for the company address "New York City Sain Peter 59" */}
           <FooterContent>
             <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2">
