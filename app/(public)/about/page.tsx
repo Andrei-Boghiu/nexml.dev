@@ -72,6 +72,8 @@ export default function AboutPage() {
           <p>Built to scale — from small businesses to large enterprises.</p>
         </div>
       </section>
+
+      <Separator className="mt-24" />
     </div>
   );
 }
